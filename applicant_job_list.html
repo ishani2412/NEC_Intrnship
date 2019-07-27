@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% for job in jobDetails %}
+   <form action = "/apply_job" method = "post">
+   {% set x = job[0] %}
+    <div class="card mt-5">
+            <div class="card-header">
+                <div><b>Job Title</b></div>
+                <div>
+                    {{ job[1] }}
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div><b>Job Description</b></div>
+                <div>
+                    {{ job[2]  }}
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <span><b>Skills required</b></span>
+                <span class="float-right">
+
+                        {{ job[3] }}<br>
+
+                </span>
+                <button type = submit  name = "apply" value = {{ job[0] }}> Apply </button>
+            </div>
+        </div>
+
+   </form>
+{% endfor %}

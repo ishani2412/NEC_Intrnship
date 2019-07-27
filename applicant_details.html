@@ -1,0 +1,31 @@
+
+
+{% extends "layout.html" %}
+{% block title %}Recruiter{% endblock %}
+{% block body %}
+{%  set x= applicant_id %}
+
+<div class="container">
+    <form action="/resume_handler" method="post" >
+        <div class="card">
+            <div class="card-header">
+                Applicant Resume Builder
+            </div>
+            <div class="card-body">
+                <input type="hidden" name="applicant_id" value ='{{ x }}'>
+                <input type="text" name="fname" placeholder="Enter Full Name" class="form-control">
+                <input type="text" name="education" placeholder="Enter Your Education" class="form-control">
+                <input type="text" name="phone" placeholder="Enter Contact Number" class="form-control">
+                <input type="text" name="email" placeholder="Enter Email" class="form-control">
+                <input type="text" name="jobSkills" placeholder="Enter Skills" class="form-control">
+                <input type="text" name="projects"  placeholder="Enter Projects You Worked Upon" class="form-control">
+                <input type="text" name="experience" placeholder="Enter Your Experience" class="form-control">
+
+            </div>
+            <div class="card-footer">
+                <input type="submit" class="btn btn-success float-right" value="Apply for Job">
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

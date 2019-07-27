@@ -1,0 +1,41 @@
+
+{% extends "layout.html" %}
+{% block title %}Recruiter{% endblock %}
+{% block body %}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card" style="width:500px; background: #ffffff">
+            <img class="card-img-top" src="../../static/images/apply_job.png" alt="">
+              <div class="card-body">
+                <h4 class="card-title">Evolve your Career!</h4>
+                <p class="card-text p-3">Are you qualified for the top jobs in your city? Are your salary and skills competitive in the market?
+                    What could you do to move your career forward? HiringInceptors will help answer all that and more
+                </p>
+                <a href="/applicant_job_list" class="btn btn-info float-right">
+                    Explore Available Jobs
+                </a>
+              </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card" style="width:500px; background: #ffffff;">
+            <div style="background: rgba(0,0,0,.036); padding: 5%;">
+                <img class="card-img-top" src="../../static/images/resume.jpg" alt="" style="height: 325px;">
+            </div>
+          <div class="card-body">
+
+            <h4 class="card-title">Get noticed. Get hired.</h4>
+            <p class="card-text p-4">
+                We’re always really keen to hear from great people. If we have a suitable role available for you we’ll be in touch very soon, if not, we’ll store your details and get back to you as soon as we have a match.<br>
+            </p>
+
+            <a href="/create_resume" class="btn btn-success">Create Your Resume</a>
+          </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
